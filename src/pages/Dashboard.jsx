@@ -27,7 +27,7 @@ const Dashboard = () => {
           {auth.userPrincipalName}
         </Typography>
         <Link
-          href={`https://login.live.com/oauth20_authorize.srf?client_id=7aa5742a-d422-46a7-9a9f-7aebaec5cf44&&login_hint=${auth?.userPrincipalName}`}
+          href={`http://localhost:3001/login?login_hint=${auth?.userPrincipalName}`}
           target="_blank"
         >
           <Button
