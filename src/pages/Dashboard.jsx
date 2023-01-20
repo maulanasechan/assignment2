@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
-import { Box, Button, Stack, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box, Button, Stack, Typography, Link } from "@mui/material";
 const Dashboard = () => {
   const auth = useSelector((state) => state.user);
 
@@ -28,7 +27,8 @@ const Dashboard = () => {
           {auth.userPrincipalName}
         </Typography>
         <Link
-          to={`http://localhost:4000/login?login_hint=${auth?.userPrincipalName}`}
+          href={`https://login.live.com/oauth20_authorize.srf?client_id=7aa5742a-d422-46a7-9a9f-7aebaec5cf44&&login_hint=${auth?.userPrincipalName}`}
+          target="_blank"
         >
           <Button
             sx={{
